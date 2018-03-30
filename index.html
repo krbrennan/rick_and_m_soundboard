@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Wubalubadubdub</title>
+  </head>
+  <body>
+
+    <div class="keys">
+      <div data-key="65" class="key">
+        <k>A</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="83" class="key">
+        <k>S</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="68" class="key">
+        <k>D</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="70" class="key">
+        <k>F</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="71" class="key">
+        <k>G</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="72" class="key">
+        <k>H</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="74" class="key">
+        <k>J</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="75" class="key">
+        <k>K</k>
+        <span class="sound">Quiet</span>
+      </div>
+      <div data-key="76" class="key">
+        <k>L</k>
+        <span class="sound">Quiet</span>
+      </div>
+    </section>
+
+    <audio data-key="65" src="assets/i_like_this_name.mp3">
+    <audio data-key="83" src="assets/amish_cyborg.mp3">
+    <audio data-key="68" src="assets/krombop_michael.mp3">
+    <audio data-key="70" src="assets/wuba.mp3">
+    <audio data-key="71" src="assets/pencilvester.mp3">
+    <audio data-key="72" src="assets/meseeks.mp3">
+    <audio data-key="74" src="assets/show_me_what_u_got.mp3">
+    <audio data-key="75" src="assets/masterbated.mp3">
+    <audio data-key="76" src="assets/michael_down.mp3">
+
+
+    </audio>
+
+
+
+    <script>
+
+    function removeTransition (e) {
+      if (e.propertyName !== 'transform'){
+        e.target.classList.remove('playing');
+      }
+    }
+
+    function playSound (e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+
+    const keys = document.querySelectorAll('.key')
+    keys.forEach(key => document.addEventListener('transitionend', removeTransition));
+
+    window.addEventListener('keydown', playSound);
+    </script>
+  </body>
+</html>

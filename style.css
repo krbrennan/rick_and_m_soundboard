@@ -1,0 +1,68 @@
+html {
+  background:
+  radial-gradient(rgba(100,255,0,0.25), rgba(1,0,255,0.5)),
+  url(assets/ass.png) bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+}
+
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  justify-content: center;
+  margin: auto;
+  transition: all 0.7s ease;
+  flex-wrap: wrap;
+}
+
+.playing {
+  transform: scale(1.2);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+
+.key {
+  background: rgba(0,0,0,0.7);
+  border: .4rem solid black;
+  /* box-shadow: 5px 2px 5px black; */
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-self: center;
+  margin: 0.25rem;
+  transition: all 0.7s ease;
+}
+
+k {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding: 3rem;
+  font-size: 250%;
+}
+
+.sound {
+  color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-self: center;
+  padding: 25%;
+  font-size: 20px;
+}
+
+.playing {
+
+}
